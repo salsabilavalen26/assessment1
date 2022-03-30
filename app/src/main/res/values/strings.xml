@@ -5,4 +5,10 @@
     <string name="nim">NIM</string>
     <string name="kelas">Kelas</string>
     <string name="tambah">Tambah</string>
+    <string name="nama_mhs">Nama : %1$s</string>
+    <string name="nim_mhs">NIM : %1$s</string>
+    <string name="kelas_mhs">Kelas : %1$s</string>
+    <string name="nama_invalid">Nama tidak boleh kosong.</string>
+    <string name="nim_invalid">NIM tidak boleh kosong.</string>
+    <string name="kelas_invalid">Kelas tidak boleh kosong.</string>
 </resources>
