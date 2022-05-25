@@ -1,5 +1,6 @@
 package org.d3if2092.assessment1
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
@@ -22,6 +23,7 @@ class FormFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.button.setOnClickListener { dataMahasiswa() }
         binding.button3.setOnClickListener { it.findNavController().navigate(R.id.action_formFragment_to_listFragment) }
+        binding.shareButton.setOnClickListener { shareData() }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -59,5 +61,22 @@ class FormFragment : Fragment() {
         binding.textView4.text = getString(R.string.nama_mhs, nama)
         binding.textView6.text = getString(R.string.nim_mhs, nim)
         binding.textView8.text = getString(R.string.kelas_mhs, kelas)
+
+        binding.shareButton.visibility = View.VISIBLE
+    }
+
+    private fun shareData() {
+        val message = getString(R.string.bagikan_template,
+            binding.namaEditText.text,
+            binding.nimEditText.text,
+            binding.kelas.text
+        )
+
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager) != null) {
+            startActivity(shareIntent)
+        }
     }
 }

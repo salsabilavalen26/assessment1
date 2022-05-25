@@ -15,4 +15,6 @@
     <string name="copyright">Aplikasi ini digunakan untuk menyimpan list data mahasiswa. Dimana data
         tersebut terdiri dari nama lengkap, NIM, dan kelas dari mahasiswa. </string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">Nama Lengkap :  %1$s\nNIM :  %2$s\nKelas :  %3$s</string>
 </resources>
