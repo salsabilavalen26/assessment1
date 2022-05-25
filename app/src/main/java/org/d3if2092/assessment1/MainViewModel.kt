@@ -1,13 +1,20 @@
 package org.d3if2092.assessment1
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.d3if2092.assessment1.db.MahasiswaDao
 
-class MainViewModel : ViewModel() {
+class MainViewModel(private val db : MahasiswaDao) : ViewModel() {
 
-    private val data = MutableLiveData<FormFragment?>()
-
-    fun getData(): LiveData<FormFragment?> = data
+    fun insertData(mahasiswa: Mahasiswa) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                db.insertData(mahasiswa)
+            }
+        }
+    }
 
 }
