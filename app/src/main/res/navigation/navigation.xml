@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/formFragment">
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="org.d3if2092.assessment1.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" >
+        <action
+            android:id="@+id/action_formFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_formFragment_to_aboutFragment2"
+            app:destination="@id/aboutFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="org.d3if2092.assessment1.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/aboutFragment2"
+        android:name="org.d3if2092.assessment1.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"/>
+</navigation>
