@@ -6,14 +6,19 @@ import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import org.d3if2092.assessment1.databinding.FragmentFormBinding
+import org.d3if2092.assessment1.model.HasilNilai
 
 class FormFragment : Fragment() {
 
     private lateinit var binding: FragmentFormBinding
+
+    private val viewModel: MainViewModel by lazy {
+        ViewModelProvider(this)[MainViewModel::class.java]
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentFormBinding.inflate(layoutInflater, container, false)
@@ -59,11 +64,33 @@ class FormFragment : Fragment() {
             return
         }
 
+        val nilaiSmtr1 = binding.nilaiSmtr1.text.toString()
+        if (TextUtils.isEmpty(nilaiSmtr1)) {
+            Toast.makeText(context, R.string.nilai1_invalid, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val nilaiSmtr2 = binding.nilaiSmtr2.text.toString()
+        if (TextUtils.isEmpty(nilaiSmtr2)) {
+            Toast.makeText(context, R.string.nilai2_invalid, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val result = viewModel.rataNilai(
+            nilaiSmtr1.toFloat(),
+            nilaiSmtr2.toFloat()
+        )
+
         binding.textView4.text = getString(R.string.nama_mhs, nama)
         binding.textView6.text = getString(R.string.nim_mhs, nim)
         binding.textView8.text = getString(R.string.kelas_mhs, kelas)
+        showResult(result)
 
         binding.shareButton.visibility = View.VISIBLE
+    }
+
+    private fun showResult(result: HasilNilai) {
+        binding.textView9.text = getString(R.string.nilai_mhs, result.rataNilai)
     }
 
     private fun shareData() {

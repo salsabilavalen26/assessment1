@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import org.d3if2092.assessment1.db.MahasiswaDb
 
 class MainActivity : AppCompatActivity() {
 
