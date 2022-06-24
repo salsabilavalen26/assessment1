@@ -30,6 +30,7 @@ class FormFragment : Fragment() {
         binding.button.setOnClickListener { dataMahasiswa() }
         binding.button3.setOnClickListener { it.findNavController().navigate(R.id.action_formFragment_to_listFragment) }
         binding.shareButton.setOnClickListener { shareData() }
+        binding.listDosen.setOnClickListener { it.findNavController().navigate(R.id.action_formFragment_to_dosenFragment) }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

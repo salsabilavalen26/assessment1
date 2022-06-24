@@ -16,10 +16,13 @@
         <action
             android:id="@+id/action_formFragment_to_aboutFragment2"
             app:destination="@id/aboutFragment2" />
+        <action
+            android:id="@+id/action_formFragment_to_dosenFragment"
+            app:destination="@id/dosenFragment" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="org.d3if2092.assessment1.ListFragment"
+        android:name="org.d3if2092.assessment1.ui.main.ListFragment"
         android:label="ListFragment"
         tools:layout="@layout/fragment_list" />
     <fragment
@@ -27,4 +30,9 @@
         android:name="org.d3if2092.assessment1.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about"/>
+    <fragment
+        android:id="@+id/dosenFragment"
+        android:name="org.d3if2092.assessment1.ui.main.DosenFragment"
+        android:label="DosenFragment"
+        tools:layout="@layout/activity_dosen"/>
 </navigation>

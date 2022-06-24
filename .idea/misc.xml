@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/activity_dosen.xml" value="0.1671195652173913" />
+        <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/activity_mahasiswa.xml" value="0.17300724637681159" />
         <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/fragment_about.xml" value="0.264" />
+        <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/fragment_dosen.xml" value="0.17300724637681159" />
         <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/fragment_form.xml" value="0.264" />
-        <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/fragment_list.xml" value="0.2056159420289855" />
+        <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/fragment_list.xml" value="0.264" />
+        <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/list_dosen.xml" value="0.17300724637681159" />
+        <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/layout/list_mhs.xml" value="0.264" />
         <entry key="..\:/Kuliah/S6/Mobpro1/Ass1/app/src/main/res/menu/options_menu.xml" value="0.25416666666666665" />
       </map>
     </option>

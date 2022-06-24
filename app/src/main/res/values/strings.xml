@@ -22,4 +22,9 @@
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="bagikan">Bagikan</string>
     <string name="bagikan_template">Nama Lengkap :  %1$s\nNIM :  %2$s\nKelas :  %3$s</string>
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data dosen otomatis</string>
+    <string name="notif_title">Ada dosen baru!</string>
+    <string name="notif_text">Cek sekarang biar nggak penasaran..</string>
+    <string name="koneksi_error">Koneksi error</string>
 </resources>
